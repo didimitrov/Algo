@@ -1,0 +1,2 @@
+# TelerikHomeworksAndSomeAlgorithms
+Homeworks and some algorithm implementations
