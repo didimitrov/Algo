@@ -16,7 +16,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace _18.ExtractAllValidEmails
+namespace _17.ExtractAllValidEmails
 {
     class Program
     {

@@ -6,9 +6,8 @@
 */
 
 using System;
-using System.Globalization;
 
-namespace _18.PrintDaysOfWeekAndTime
+namespace _17.PrintDaysOfWeekAndTime
 {
     class Program
     {
