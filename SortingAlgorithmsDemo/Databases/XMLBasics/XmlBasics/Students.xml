@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="StudentsStyle.xslt"?>
+
+<students xmlns:students="urn:something.com:StudentsNamespace" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <student>
+    <name>Ivan</name>
+    <sex>Male</sex>
+    <birthdate>02/04/1999</birthdate>
+    <phone>0326555</phone>
+    <email>cool@mail.bg</email>
+    <course>Mega maths</course>
+    <specialty>Math</specialty>
+    <facultynumber>111111111</facultynumber>
+    <takenexams>
+      <name>Math 1</name>
+      <tutor>Pesho</tutor>
+      <score>300</score>
+    </takenexams>
+  </student>
+
+  <student>
+    <name>Miti</name>
+    <sex>Male</sex>
+    <birthdate>02/04/1999</birthdate>
+    <phone>0326555</phone>
+    <email>cool@mail.bg</email>
+    <course>Mega maths</course>
+    <specialty>Math</specialty>
+    <facultynumber>111111111</facultynumber>
+    <takenexams>
+      <name>Math 1</name>
+      <tutor>Pesho</tutor>
+      <score>300</score>
+    </takenexams>
+  </student>
+</students> 
