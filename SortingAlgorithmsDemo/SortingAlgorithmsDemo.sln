@@ -297,6 +297,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.FindPricesOfAlbumsLINQ",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.02.XMLProcessingIn.NET", "Databases\XMLProcessingIn.NET\14.02.XMLProcessingIn.NET\14.02.XMLProcessingIn.NET.csproj", "{DC5A3E6B-CD6D-4B19-A10C-F4BAE6761D00}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{A556BE3F-5F4D-450C-BBA5-A2E0049A68BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

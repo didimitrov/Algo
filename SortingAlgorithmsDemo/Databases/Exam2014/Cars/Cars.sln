@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.Models", "Cars.Models\Cars.Models.csproj", "{6D428055-582E-408C-95C9-605846151ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.Data", "Cars.Data\Cars.Data.csproj", "{AA83203F-B9CA-406D-9BCF-2493C81CCB92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataJsonFiles", "DataJsonFiles", "{ECD56AA6-183D-4BCF-9AE6-556878EE62FD}"
+	ProjectSection(SolutionItems) = preProject
+		DataJsonFiles\data.0.json = DataJsonFiles\data.0.json
+		DataJsonFiles\data.1.json = DataJsonFiles\data.1.json
+		DataJsonFiles\data.2.json = DataJsonFiles\data.2.json
+		DataJsonFiles\data.3.json = DataJsonFiles\data.3.json
+		DataJsonFiles\data.4.json = DataJsonFiles\data.4.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.ConsoleClient", "Cars.ConsoleClient\Cars.ConsoleClient.csproj", "{72FB3339-45B3-4D7D-A8CC-BAAE24AE3DF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queries", "Queries", "{A78B049C-4499-48FC-9CDD-F53C585A8085}"
+	ProjectSection(SolutionItems) = preProject
+		Queries\Queries.xml = Queries\Queries.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D428055-582E-408C-95C9-605846151ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D428055-582E-408C-95C9-605846151ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D428055-582E-408C-95C9-605846151ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D428055-582E-408C-95C9-605846151ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA83203F-B9CA-406D-9BCF-2493C81CCB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA83203F-B9CA-406D-9BCF-2493C81CCB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA83203F-B9CA-406D-9BCF-2493C81CCB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA83203F-B9CA-406D-9BCF-2493C81CCB92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FB3339-45B3-4D7D-A8CC-BAAE24AE3DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FB3339-45B3-4D7D-A8CC-BAAE24AE3DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FB3339-45B3-4D7D-A8CC-BAAE24AE3DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FB3339-45B3-4D7D-A8CC-BAAE24AE3DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
