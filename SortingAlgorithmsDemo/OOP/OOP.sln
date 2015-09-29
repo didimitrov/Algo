@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FindStudentsWithFirstNameBeforeLast", "ExtensionMethodsLambdaExprLINQ\03.FindStudentsWithFirstNameBeforeLast\03.FindStudentsWithFirstNameBeforeLast.csproj", "{3B5E8462-5E4F-41B6-AFDA-264F3ADD4C45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtensionMethodsLambdaExprLINQ", "ExtensionMethodsLambdaExprLINQ", "{3C161677-0276-40FE-82CE-D5A5DD5A8CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.FindStudentsBetween18And24YearsOld", "ExtensionMethodsLambdaExprLINQ\04.FindStudentsBetween18And24YearsOld\04.FindStudentsBetween18And24YearsOld.csproj", "{1399FF51-98DE-4CBB-9AA3-076744E3FB05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SortStudentsInDescendingOrder", "..\OOPExtensionMethodsLambdaExprLINQ\05.SortStudentsInDescendingOrder\05.SortStudentsInDescendingOrder.csproj", "{B759F2CC-475E-4303-AF13-07CB36CC3892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.PrintNumbersDivisibleBy3And7", "ExtensionMethodsLambdaExprLINQ\06.PrintNumbersDivisibleBy3And7\06.PrintNumbersDivisibleBy3And7.csproj", "{4E6EF347-E526-49AB-9516-3D578FDA1AFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Timer", "..\OOPExtensionMethodsLambdaExprLINQ\07. Timer\07. Timer.csproj", "{897D55E1-DC52-42DB-9100-9605B9DF8ABF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOPPrinciplesPart1", "OOPPrinciplesPart1", "{7BC6D74E-FB88-4B67-99FC-F1A1A93A19F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.School", "OOPPrinciplesPart1\01.School\01.School.csproj", "{9597A1DD-9AED-46E9-B1EB-5B79F1168B7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B5E8462-5E4F-41B6-AFDA-264F3ADD4C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5E8462-5E4F-41B6-AFDA-264F3ADD4C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5E8462-5E4F-41B6-AFDA-264F3ADD4C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5E8462-5E4F-41B6-AFDA-264F3ADD4C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1399FF51-98DE-4CBB-9AA3-076744E3FB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1399FF51-98DE-4CBB-9AA3-076744E3FB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1399FF51-98DE-4CBB-9AA3-076744E3FB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1399FF51-98DE-4CBB-9AA3-076744E3FB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B759F2CC-475E-4303-AF13-07CB36CC3892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B759F2CC-475E-4303-AF13-07CB36CC3892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B759F2CC-475E-4303-AF13-07CB36CC3892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B759F2CC-475E-4303-AF13-07CB36CC3892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6EF347-E526-49AB-9516-3D578FDA1AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6EF347-E526-49AB-9516-3D578FDA1AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6EF347-E526-49AB-9516-3D578FDA1AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6EF347-E526-49AB-9516-3D578FDA1AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897D55E1-DC52-42DB-9100-9605B9DF8ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897D55E1-DC52-42DB-9100-9605B9DF8ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897D55E1-DC52-42DB-9100-9605B9DF8ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897D55E1-DC52-42DB-9100-9605B9DF8ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9597A1DD-9AED-46E9-B1EB-5B79F1168B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9597A1DD-9AED-46E9-B1EB-5B79F1168B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9597A1DD-9AED-46E9-B1EB-5B79F1168B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9597A1DD-9AED-46E9-B1EB-5B79F1168B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B5E8462-5E4F-41B6-AFDA-264F3ADD4C45} = {3C161677-0276-40FE-82CE-D5A5DD5A8CEB}
+		{1399FF51-98DE-4CBB-9AA3-076744E3FB05} = {3C161677-0276-40FE-82CE-D5A5DD5A8CEB}
+		{B759F2CC-475E-4303-AF13-07CB36CC3892} = {3C161677-0276-40FE-82CE-D5A5DD5A8CEB}
+		{4E6EF347-E526-49AB-9516-3D578FDA1AFB} = {3C161677-0276-40FE-82CE-D5A5DD5A8CEB}
+		{897D55E1-DC52-42DB-9100-9605B9DF8ABF} = {3C161677-0276-40FE-82CE-D5A5DD5A8CEB}
+	EndGlobalSection
+EndGlobal
