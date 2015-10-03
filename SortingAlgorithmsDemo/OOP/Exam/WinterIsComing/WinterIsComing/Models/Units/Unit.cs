@@ -2,7 +2,7 @@
 using System.Text;
 using WinterIsComing.Contracts;
 
-namespace WinterIsComing.Models
+namespace WinterIsComing.Models.Units
 {
     class Unit:IUnit
     {
