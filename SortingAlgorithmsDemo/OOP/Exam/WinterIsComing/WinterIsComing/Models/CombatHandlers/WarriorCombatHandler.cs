@@ -1,12 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WinterIsComing.Contracts;
+using WinterIsComing.Core.Exceptions;
+using WinterIsComing.Models.Spells;
 
 namespace WinterIsComing.Models.CombatHandlers
 {
-    class WarriorCombatHandler
+    class WarriorCombatHandler: CombatHandler
     {
+        public WarriorCombatHandler(IUnit unit) : base(unit)
+        {
+        }
+
+        public override IEnumerable<IUnit> PickNextTargets(IEnumerable<IUnit> candidateTargets)
+        {
+            var targets = candidateTargets.OrderBy(x => x.HealthPoints).ThenBy(x => x.Name).Take(1);
+            return targets;
+        }
+
+        public override ISpell GenerateAttack()
+        {
+            ISpell spell = null;
+            if (this.Unit.HealthPoints <= 80)
+            {
+                spell = new Cleave(this.Unit.AttackPoints + (this.Unit.HealthPoints*2));
+            }
+            else
+            {
+                spell= new Cleave(this.Unit.AttackPoints);
+            }
+            if (this.Unit.HealthPoints > 50 && spell.EnergyCost > this.Unit.EnergyPoints)
+            {
+                throw new NotEnoughEnergyException(string.Format("{0} does not have enough energy to cast {1}", this.Unit.Name, spell.GetType().Name));
+            }
+
+            if (this.Unit.HealthPoints > 50)
+            {
+                this.Unit.EnergyPoints -= spell.EnergyCost;
+            }
+            return spell;
+        }
     }
 }

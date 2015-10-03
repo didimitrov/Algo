@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using WinterIsComing.Contracts;
 
 namespace WinterIsComing.Models.CombatHandlers
 {
-    class CombatHandler
+    abstract class CombatHandler:ICombatHandler
     {
+        protected CombatHandler(IUnit unit)
+        {
+            Unit = unit;
+        }
+
+        public  IUnit Unit { get; set; }
+
+        public abstract IEnumerable<IUnit> PickNextTargets(IEnumerable<IUnit> candidateTargets);
+
+        public abstract ISpell GenerateAttack();
+
     }
 }
