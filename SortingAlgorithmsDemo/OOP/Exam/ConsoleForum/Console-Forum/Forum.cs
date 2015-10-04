@@ -1,4 +1,6 @@
-﻿namespace ConsoleForum
+﻿using ConsoleForum.Commands.Exceptions;
+
+namespace ConsoleForum
 {
     using System;
     using System.Collections.Generic;

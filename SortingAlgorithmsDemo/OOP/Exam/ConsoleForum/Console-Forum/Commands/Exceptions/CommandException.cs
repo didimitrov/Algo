@@ -1,8 +1,8 @@
-﻿namespace ConsoleForum.Commands
-{
-    using System;
-    using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
+namespace ConsoleForum.Commands.Exceptions
+{
     public class CommandException : Exception, ISerializable
     {
         public CommandException(string message) 

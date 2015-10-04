@@ -1,4 +1,6 @@
-﻿namespace ConsoleForum.Commands
+﻿using ConsoleForum.Commands.Exceptions;
+
+namespace ConsoleForum.Commands
 {
     using System;
     using System.Collections.Generic;
@@ -41,8 +43,8 @@
                             throw new CommandException(Messages.RegAdminNotAllowed);
                         }
 
-                        // TODO: Implement administrator 
-                        throw new NotImplementedException();
+                        user = new Administrator(users.Count + 1, username, password, email);
+                        break;
                     default:
                         user = new User(users.Count + 1, username, password, email);
                         break;
