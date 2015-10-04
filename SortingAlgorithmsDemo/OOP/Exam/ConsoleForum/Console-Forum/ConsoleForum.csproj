@@ -43,10 +43,13 @@
   <ItemGroup>
     <Compile Include="Commands\AbstractCommand.cs" />
     <Compile Include="Commands\Exceptions\CommandException.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Commands\Factories\CommandFactory.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\LogOutCommand.cs" />
+    <Compile Include="Commands\MakeBestAnswerCommand.cs" />
     <Compile Include="Commands\OpenQuestion.cs" />
+    <Compile Include="Commands\PostAnswerCommand.cs" />
     <Compile Include="Commands\PostQuestionCommand.cs" />
     <Compile Include="Commands\RegisterCommand.cs" />
     <Compile Include="Commands\ShowAllQuestions.cs" />
