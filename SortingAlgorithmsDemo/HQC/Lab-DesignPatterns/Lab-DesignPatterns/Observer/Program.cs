@@ -1,9 +1,8 @@
-﻿namespace Skyrim
+﻿using System.Collections.Generic;
+using Observer.Units;
+
+namespace Observer
 {
-    using System.Collections.Generic;
-
-    using Skyrim.Units;
-
     class Program
     {
         static void Main()
@@ -15,6 +14,11 @@
             warriors.Add(new Warrior("Ulfric Stormcloak", 80, 80));
             warriors.Add(new Warrior("Cicero", 15, 50));
             warriors.Add(new Warrior("Jarl Balgruuf", 40, 30));
+
+            foreach (var warrior in warriors)
+            {
+                dragon.Attach(warrior);
+            }
 
             // Nothing happens
             dragon.HealthPoints -= 20;

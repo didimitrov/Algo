@@ -1,5 +1,6 @@
-﻿namespace Skyrim.Items
+﻿namespace Observer.Items
 {
+
     public class Weapon
     {
         public Weapon(int apBonus, int hpBonus)

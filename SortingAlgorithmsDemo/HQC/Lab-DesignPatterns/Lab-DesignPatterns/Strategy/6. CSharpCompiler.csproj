@@ -43,8 +43,11 @@
   <ItemGroup>
     <Compile Include="CSharpCompiler.cs" />
     <Compile Include="Exceptions\CompilationException.cs" />
+    <Compile Include="ICodeValidationStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\CodeLengthValidator.cs" />
+    <Compile Include="Validators\SystemNetValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

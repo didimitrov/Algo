@@ -1,4 +1,6 @@
-﻿namespace SharpCompiler
+﻿using Strategy;
+
+namespace SharpCompiler
 {
     using System;
     using System.CodeDom.Compiler;
@@ -15,6 +17,13 @@
         private CompilerParameters compilerParameters;
         private CSharpCodeProvider csharpCodeProvider;
 
+
+        public ICodeValidationStrategy Strategy { get; private set; }
+
+        public CSharpCompiler(ICodeValidationStrategy strategy = null)
+        {
+            this.Strategy = strategy;
+        }
         public void Compile(string codeString)
         {
             this.Preprocess(codeString);
@@ -68,7 +77,10 @@
 
         protected void Preprocess(string codeString)
         {
-            throw new NotImplementedException();
+            if (this.Strategy != null)
+            {
+                this.Strategy.Validate(codeString);
+            }
         }
     }
 }

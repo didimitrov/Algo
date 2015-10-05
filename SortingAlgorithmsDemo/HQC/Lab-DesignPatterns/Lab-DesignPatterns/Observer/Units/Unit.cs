@@ -1,4 +1,4 @@
-﻿namespace Skyrim.Units
+﻿namespace Observer.Units
 {
     public abstract class Unit
     {
