@@ -1,4 +1,6 @@
-﻿namespace CustomerService.Models
+﻿using Visitor.Interfaces;
+
+namespace CustomerService.Models
 {
     using System.Collections.Generic;
 
@@ -27,6 +29,11 @@
         public void AddFreePurchase(Purchase purchase)
         {
             this.Purchases.Add(purchase);
+        }
+
+        public void Accept(ICustomerVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }

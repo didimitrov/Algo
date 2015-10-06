@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\CustomerRepository.cs" />
+    <Compile Include="Interfaces\ICustomerVisitor.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\Visitors\DiscountRaiseVisitor.cs" />
+    <Compile Include="Models\Visitors\FreePurchaseVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

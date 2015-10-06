@@ -1,24 +1,29 @@
-﻿namespace CustomerService
+﻿using Visitor.Models.Visitors;
+
+namespace CustomerService
 {
     using CustomerService.Data;
     using CustomerService.Models;
 
     public class Program
     {
-        static void Main()
+        private static void Main()
         {
             var repository = new CustomerRepository();
 
             var premiumCustomers = repository.GetPremiumCustomers();
+            var discountVisitor = new DiscountRaiseVisitor();
             foreach (var premiumCustomer in premiumCustomers)
             {
-                premiumCustomer.RaiseDiscount(5.0);
+                premiumCustomer.Accept(discountVisitor);
             }
 
+
+            var freePrurchase = new FreePurchaseVisitor();
             var allCustomers = repository.GetAll();
             foreach (var customer in allCustomers)
             {
-                customer.AddFreePurchase(new Purchase("SteamOp", 0.0));
+                customer.Accept(freePrurchase);
             }
         }
     }
