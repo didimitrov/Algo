@@ -3,18 +3,16 @@ using Computers.UI.Console.Interfaces;
 
 namespace Computers.UI.Console
 {
-    class Laptop: PersonalComputer,ILaptop
+    internal class Laptop : PersonalComputer, ILaptop
     {
-        public Laptop(ICpu cpu, IRam ram, IVideoCard gpu, IStorage storage) : base(cpu, ram, gpu, storage)
+        public Laptop(ICpu cpu, IRam ram, IVideoCard gpu, IStorage storage, IRechargable battery)
+            : base(cpu, ram, gpu, storage)
         {
+            Battery = battery;
         }
 
-        
-        public IRechargable Battery
-        {
-            get;
-            private set;
-        }
+
+        public IRechargable Battery { get; private set; }
 
         public override void Play(int guessNumber)
         {
@@ -26,6 +24,7 @@ namespace Computers.UI.Console
             this.Battery.Charge(powerPercentage);
 
             this.Gpu.DrawTextData(string.Format("Battery status: {0}%", this.Battery.CurrentCharge));
-        
+
+        }
     }
 }
