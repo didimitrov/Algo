@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI.Console.Interfaces
 {
-    interface IRechargable
+   public interface IRechargable
     {
         int CurrentCharge { get; }
         void Charge(int powerInput);

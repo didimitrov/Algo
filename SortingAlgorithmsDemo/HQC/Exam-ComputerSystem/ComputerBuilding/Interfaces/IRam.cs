@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI.Console.Interfaces
 {
-    interface IRam
+    public interface IRam
     {
         int Amount { get; set; }
 

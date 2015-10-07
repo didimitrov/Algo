@@ -4,7 +4,7 @@ using Computers.UI.Console.Interfaces;
 
 namespace Computers.UI.Console
 {
-    class Computer:IComputer
+    public class Computer:IComputer
     {
         public Computer(ICpu cpu, IRam ram, IVideoCard gpu, IStorage storage)
         {

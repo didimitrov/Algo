@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI.Console.Interfaces
 {
-    interface IVideoCard
+    public interface IVideoCard
     {
         void DrawTextData(string data);
         

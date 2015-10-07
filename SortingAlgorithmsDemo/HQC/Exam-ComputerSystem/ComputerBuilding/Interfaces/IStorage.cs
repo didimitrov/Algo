@@ -1,7 +1,7 @@
 ﻿
 namespace Computers.UI.Console.Interfaces
 {
-    interface IStorage
+    public interface IStorage
     {
         void SaveData(int address, string newData);
 

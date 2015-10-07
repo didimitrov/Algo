@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI.Console.Interfaces
 {
-    interface IServer
+    public interface IServer
     {
         void Process(int data);
     }

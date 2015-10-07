@@ -43,6 +43,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\CommandType.cs" />
+    <Compile Include="ComputerCreator.cs" />
+    <Compile Include="Client\Engine.cs" />
+    <Compile Include="Factory\HpFactory.cs" />
+    <Compile Include="Factory\DellFactory.cs" />
+    <Compile Include="Factory\IComputerFactory.cs" />
+    <Compile Include="Interfaces\Desktop.cs" />
+    <Compile Include="Interfaces\IDesktop.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Interfaces\IServer.cs" />
     <Compile Include="Laptop.cs" />
@@ -51,24 +59,24 @@
     <Compile Include="Computer.cs" />
     <Compile Include="Interfaces\IComputer.cs" />
     <Compile Include="Interfaces\IRechargable.cs" />
-    <Compile Include="Raid.cs" />
-    <Compile Include="HardDrive.cs" />
+    <Compile Include="Components\Raid.cs" />
+    <Compile Include="Components\HardDrive.cs" />
     <Compile Include="Interfaces\IStorage.cs" />
-    <Compile Include="VideoCard.cs" />
+    <Compile Include="Components\VideoCard.cs" />
     <Compile Include="ColorfulVideoCard.cs" />
-    <Compile Include="Cpu.cs" />
+    <Compile Include="Components\Cpu.cs" />
     <Compile Include="CpuArchitecture.cs" />
     <Compile Include="Interfaces\ICpu.cs" />
-    <Compile Include="Interfaces\IBatery.cs" />
+    <Compile Include="Interfaces\IBattery.cs" />
     <Compile Include="Interfaces\IMotherboard .cs" />
     <Compile Include="Interfaces\IRam.cs" />
     <Compile Include="Interfaces\IVideoCard.cs" />
-    <Compile Include="LaptopBattery.cs" />
-    <Compile Include="MonochromVideoCard.cs" />
-    <Compile Include="Motherboard.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Components\Battery.cs" />
+    <Compile Include="Components\MonochromVideoCard.cs" />
+    <Compile Include="Components\Motherboard.cs" />
+    <Compile Include="Client\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ram.cs" />
+    <Compile Include="Components\Ram.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

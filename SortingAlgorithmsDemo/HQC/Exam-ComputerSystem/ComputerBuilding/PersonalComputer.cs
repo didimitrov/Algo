@@ -2,7 +2,7 @@
 
 namespace Computers.UI.Console
 {
-    abstract class PersonalComputer:Computer
+    public abstract class PersonalComputer:Computer
     {
         protected PersonalComputer(ICpu cpu, IRam ram, IVideoCard gpu, IStorage storage)
             : base(cpu, ram, gpu, storage)

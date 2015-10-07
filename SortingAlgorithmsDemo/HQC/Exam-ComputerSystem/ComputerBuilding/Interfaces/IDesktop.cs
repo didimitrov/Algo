@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI.Console.Interfaces
 {
-    interface ILaptop
+    public interface IDesktop
     {
         void Play(int guessNumber);
 

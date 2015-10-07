@@ -1,6 +1,6 @@
 ﻿namespace Computers.UI.Console.Interfaces
 {
-    interface ICpu
+    public interface ICpu
     {
         byte NumberOfCores { get; set; }
        
