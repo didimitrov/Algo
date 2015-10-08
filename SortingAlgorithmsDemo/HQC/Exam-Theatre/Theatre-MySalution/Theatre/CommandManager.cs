@@ -1,60 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using Theatre.Contracts;
 
 namespace Theatre
 {
     public class CommandManager
     {
-        public static string ExecuteAddTheatreCommand(string[] parameters)
+        private static readonly IPerformanceDatabase Database = new PerformanceDatabase();
+
+        public static string AddTheatreCommand(string[] parameters)
         {
             string theatreName = parameters[0];
-            TheatreMainProgram.Database.AddTheatre(theatreName);
+            Database.AddTheatre(theatreName);
             return "Theatre added";
         }
 
-        public static string ExecutePrintAllTheatresCommand()
+        public static string PrintAllTheatresCommand()
         {
-            var theatresCount = TheatreMainProgram.Database.ListTheatres().Count();
-            if (theatresCount > 0)
-            {
-                var resultTheatres = new LinkedList<string>();
-                for (int i = 0; i < theatresCount; i++)
-                {
-                    TheatreMainProgram.Database.ListTheatres()
-                        .Skip(i).ToList()
-                        .ForEach(t => resultTheatres.AddLast(t));
-                    foreach (var t in TheatreMainProgram.Database.ListTheatres().Skip(i + 1))
-                    {
-                        resultTheatres.Remove(t);
-                    }
-                }
-                return String.Join(", ", resultTheatres);
-            }
-            return "No theatres";
+          //if (Database.ListTheatres().Any())
+          //  {
+          //      return string.Join(",", Database.ListTheatres());
+          //  }
+          //  return "No Theatres";
+            var theatresCount = Database.ListTheatres().Count();
+            return theatresCount <= 0 ? "No theatres" : string.Join(", ", Database.ListTheatres());
         }
 
-        public static string ExecutePrintAllPerformancesCommand()
+        public static string PrintAllPerformances()
         {
-            var performances = TheatreMainProgram.Database.ListAllPerformances().ToList();
-            var result = String.Empty;
+            var performances = Database.ListAllPerformances().ToList();
+           
+            if (!performances.Any())
+            {
+                return "No performances";
+            }
+            var allPerformancesInfo =
+                performances.Select(p => string.Format("{0}, {1}, {2}", p.PerformanceTitle, p.TheatreName, p.StartDate));
+
+            return string.Join(",", allPerformancesInfo);
+        }
+
+        //public static string AddPerformance
+        //    (string theatreName,string  performanceTitle,DateTime dateTime,TimeSpan duration,decimal price)
+        //{
+        //    Database.AddPerformance(theatreName,performanceTitle,dateTime, duration, price);
+        //    return "Performance added";
+        //}
+
+        public static string AddPerformance(string[] commandParameters)
+        {
+            var theatreName = commandParameters[0];
+            var performanceTitle = commandParameters[1];
+            var startDateTime = DateTime.ParseExact(commandParameters[2], "dd.MM.yyyy HH:mm", CultureInfo.InvariantCulture);
+            var duration = TimeSpan.Parse(commandParameters[3]);
+            var price = decimal.Parse(commandParameters[4], NumberStyles.Float);
+           
+            Database.AddPerformance(theatreName, performanceTitle, startDateTime, duration, price);
+            return "Performance added";
+        }
+
+        public string PrintPerformances(string[] commandParameters)
+        {
+            var theatre = commandParameters[0];
+            var performances = Database.ListPerformances(theatre).Select(p =>
+            {
+                var startTime = p.StartDate.ToString("dd.MM.yyyy HH:mm");
+                return string.Format("({0}, {1})", p.PerformanceTitle, startTime);
+            }).ToList();
+
             if (performances.Any())
             {
-                for (int i = 0; i < performances.Count; i++)
-                {
-                    var sb = new StringBuilder();
-                    sb.Append(result);
-                    if (i > 0)
-                    {
-                        sb.Append(", ");
-                    }
-                    string result1 = performances[i].StartDate.ToString("dd.MM.yyyy HH:mm");
-                    sb.AppendFormat("({0}, {1}, {2})", performances[i].PerformanceTitle, performances[i].TheatreName,
-                        result1);
-                    result = sb + "";
-                }
-                return result;
+                return string.Join(",", performances);
             }
             return "No performances";
         }

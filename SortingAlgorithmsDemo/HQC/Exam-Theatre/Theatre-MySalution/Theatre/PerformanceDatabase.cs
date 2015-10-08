@@ -15,7 +15,7 @@ namespace Theatre
 
         public void AddTheatre(string name)
         {
-            if (!this._theatrePerformances.ContainsKey(name))
+            if (this._theatrePerformances.ContainsKey(name))
             {
                 throw new DuplicateTheatreException("Duplicate theatre");
             }

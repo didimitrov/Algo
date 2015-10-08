@@ -8,7 +8,7 @@ namespace Theatre
         {
             this.TheatreName = theatreName;
             this.PerformanceTitle = performanceTitle;
-            this.StartDate = StartDate;
+            this.StartDate = startDate;
             this.Duration = duration;
             this.Price = price;
         }

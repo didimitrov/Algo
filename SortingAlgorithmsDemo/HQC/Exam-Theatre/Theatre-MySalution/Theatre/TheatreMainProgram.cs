@@ -12,103 +12,63 @@ namespace Theatre
 {
     public class TheatreMainProgram
     {
-        public static IPerformanceDatabase Database = new PerformanceDatabase();
+        public static CommandManager CommandManager= new CommandManager();
 
         protected static void Main()
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-EN");
-           
-            while (true)
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            string data;
+            while ((data = Console.ReadLine()) != null)
             {
-                string inputLine = Console.ReadLine();
-                if (inputLine == null)
+                if (data == string.Empty)
                 {
-                    return;
+                    continue;
                 }
 
-                if (inputLine != String.Empty)
+                string output;
+                try
                 {
-                    string[] inputParts = inputLine.Split('(');
-                    string chiHuy = inputParts[0];
-                    string chiHuyResult;
-                    try
-                    {
-                        switch (chiHuy)
-                        {
-                            case "AddTheatre":
-                                inputParts = inputLine.Split('(');
-                                chiHuy = inputParts[0];
-                                string[] chiHuyParts1 = inputLine.Split(new[] { '(', ',', ')' }, StringSplitOptions.RemoveEmptyEntries);
-                                string[] chiHuyParams1 = chiHuyParts1.Skip(1).Select(p => p.Trim()).ToArray();
-                                string[] chiHuyParams = chiHuyParams1;
-                                chiHuyResult = CommandManager.ExecuteAddTheatreCommand(chiHuyParams);
-                                break;
-
-                            case "PrintAllTheaters":
-                                chiHuyResult = CommandManager.ExecutePrintAllTheatresCommand();
-                                break;
-
-                            case "AddPerformance":
-                                inputParts = inputLine.Split('(');
-                                chiHuy = inputParts[0];
-                                chiHuyParts1 = inputLine.Split(new[] { '(', ',', ')' },
-                                StringSplitOptions.RemoveEmptyEntries);
-                                chiHuyParams1 = chiHuyParts1.Skip(1).Select(p => p.Trim()).ToArray();
-                                chiHuyParams = chiHuyParams1;
-                                string theatreName = chiHuyParams[0];
-                                string performanceTitle = chiHuyParams[1];
-                                DateTime result = DateTime.ParseExact(chiHuyParams[2], "dd.MM.yyyy HH:mm", CultureInfo.InvariantCulture);
-                                DateTime startDateTime = result;
-                                TimeSpan result2 = TimeSpan.Parse(chiHuyParams[3]);
-                                TimeSpan duration = result2;
-                                decimal result3 = Decimal.Parse(chiHuyParams[4], NumberStyles.Float);
-                                decimal price = result3;
-
-                                Database.AddPerformance(theatreName, performanceTitle, startDateTime, duration, price);
-                                chiHuyResult = "Performance added";
-                                break;
-
-                            case "PrintAllPerformances":
-                                chiHuyResult = CommandManager.ExecutePrintAllPerformancesCommand();
-                                break;
-
-                            case "PrintPerformances":
-                                inputParts = inputLine.Split('(');
-                                chiHuy = inputParts[0];
-                                chiHuyParts1 = inputLine.Split(new[] { '(', ',', ')' }, StringSplitOptions.RemoveEmptyEntries);
-                                chiHuyParams1 = chiHuyParts1.Skip(1).Select(p => p.Trim()).ToArray();
-                                chiHuyParams = chiHuyParams1;
-                                string theatre = chiHuyParams[0];
-                                var performances = Database.ListPerformances(theatre)
-                                    .Select(p =>
-                                    {
-                                        string result1 = p.StartDate.ToString("dd.MM.yyyy HH:mm");
-                                        return String.Format("({0}, {1})", p.PerformanceTitle, result1);
-                                    }).ToList();
-                                if (performances.Any())
-                                {
-                                    chiHuyResult = string.Join(", ", performances);
-                                }
-                                else
-                                {
-                                    chiHuyResult = "No performances";
-
-
-                                }
-                                break;
-                            default:
-                                chiHuyResult = "Invalid command!";
-                                break;
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        chiHuyResult = "Error: " + ex.Message;
-                    }
-
-                    Console.WriteLine(chiHuyResult);
+                    output = CommandExecutor(data);
                 }
+                catch (Exception ex)
+                {
+                    output = "Error: " + ex.Message;
+                }
+
+                Console.WriteLine(output);
             }
+        }
+
+        private static string CommandExecutor(string text)
+        {
+            var commands = text.Split(new[] {'(', ',', ')'}, StringSplitOptions.RemoveEmptyEntries);
+            var command = commands[0];
+            var commandParameters = commands.Skip(1).Select(p => p).ToArray();
+
+            string output = string.Empty;
+
+            switch (command)
+            {
+                case "AddTheatre":
+                    output = CommandManager.AddTheatreCommand(commandParameters);
+                    break;
+                case "PrintAllTheatres":
+                    output = CommandManager.PrintAllTheatresCommand();
+                    break;
+                case "AddPerformance":
+                    output = CommandManager.AddPerformance(commandParameters);
+                    break;
+                case "PrintAllPerformances":
+                    output = CommandManager.PrintAllPerformances();
+                    break;
+                case "PrintPerformances":
+                    output = CommandManager.PrintPerformances(commandParameters);
+                    break;
+                default:
+                    output = "Invalid command!";
+                    break;
+            }
+            return output;
         }
     }
 }
