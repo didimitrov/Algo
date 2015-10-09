@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>isPrime</title>
+</head>
+<body>
+
+<label for="input">Enter positive number:</label>
+<input type="text" id="input"/>
+<button value="" onclick="checkIfPrime()">CHECK</button>
+
+
+<script>
+    function checkIfPrime() {
+        var number = document.getElementById("input").value;
+        if (isPrime(number)) {
+            console.log(number + " Is prime")
+        }
+        if (!isPrime(number)) {
+            console.log(number + " is Not prime")
+        }
+    }
+
+    function isPrime(number) {
+        for (var i = 2; i * i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
