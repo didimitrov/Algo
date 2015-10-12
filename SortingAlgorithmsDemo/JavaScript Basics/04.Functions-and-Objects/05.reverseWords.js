@@ -8,5 +8,5 @@ function reverseWordsInString(str){
 
     console.log(result)
 }
-reverseWordsInString('Hello, how are you.')
-reverseWordsInString('Life is pretty good, isn’t it?')
+reverseWordsInString('Hello, how are you.');
+reverseWordsInString('Life is pretty good, isn’t it?');
