@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>first div</div>
+<div>second div</div>
+<div class="empty"></div>
+<div>third div
+    <div>inner div</div>
+</div>
+
+<ul id="result"></ul>
+
+<script>
+    var divs = document.getElementsByTagName('div');
+    var unorderedList = document.getElementById('result');
+
+    var allItemsFragment = document.createDocumentFragment();
+
+    for (var i = 0; i < divs.length; i++) {
+        var li = document.createElement('li');
+        li.innerHTML = divs[i].innerHTML;
+        allItemsFragment.appendChild(li);
+    }
+    unorderedList.appendChild(allItemsFragment);
+</script>
+</body>
+</html>

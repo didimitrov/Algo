@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form method="post">
+    <input type="text" id="numbers-field" style="outline: none;"/>
+    <input type="submit" id="form-submit" value="Submit"/>
+</form>
+
+<script>
+    var numbersField = document.getElementById('numbers-field');
+    var submitButton = document.getElementById('form-submit');
+
+    numbersField.addEventListener('keyup', function (e) {
+        console.log(this.value);
+
+        if (this.value == '' || isInt(this.value)) {
+            this.style.background = '#fff';
+        }
+        else {
+            this.style.background = '#f00';
+        }
+    });
+
+    function isInt(value) {
+        var x = parseFloat(value);
+        return !isNaN(value) && (x | 0) === x;
+    }
+</script>
+</body>
+</html>
