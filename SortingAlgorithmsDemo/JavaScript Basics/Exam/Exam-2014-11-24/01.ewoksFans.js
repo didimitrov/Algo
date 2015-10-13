@@ -1,27 +1,27 @@
 function count(args) {
     var fans = [];
-    var haters= [];
+    var haters = [];
 
-    for (var i =0; i< args.length; i++) {
-        var arrOfDates = args[i].split('.');
-        var date = new Date(arrOfDates[2]+'-'+arrOfDates[1]+'-'+arrOfDates[0]);
+    for (var i = 0; i < args.length; i++) {
+        var splitedDate = args[i].split('.');
+        var date = new Date(splitedDate[2] + '-' + splitedDate[1] + '-' + splitedDate[0]);
 
-        if (date>new Date('1973-05-25') && date < new Date('2015-01-01')) {
+        if (date > new Date('1973-05-25') && date < new Date('2015-01-01')) {
             fans.push(date);
         }
-        if (date< new Date('1973-05-25') && date > new Date('1900-01-01')) {
+        if (date < new Date('1973-05-25') && date > new Date('1900-01-01')) {
             haters.push(date);
         }
 
-        haters.sort(function (a, b){
-            return a-b
+        haters.sort(function (a, b) {
+            return a - b
         });
         fans.sort(function (a, b) {
-            return a-b
+            return a - b
         });
     }
-    console.log("Biggest hater is: "+ haters[haters.length-1]);
-    console.log("Biggest fan is: "+ fans[0]);
+    console.log("Biggest hater is: " + haters[haters.length - 1]);
+    console.log("Biggest fan is: " + fans[0]);
 }
 
 var checkValues = [
