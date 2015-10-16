@@ -2,7 +2,6 @@ function solve(args) {
     var students = [],
         trainers = [],
         inputData = [],
-        obj = {},
         resultStudents = [],
         resultTrainers = [],
         output,
