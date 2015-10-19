@@ -108,5 +108,5 @@ var TODO = (function () {
     }
 })();
 
-var todoList = new TODO.Container('Tuesday TODO list');
+var todoList = new TODO.Container('TODO list');
 todoList.addToDom();
