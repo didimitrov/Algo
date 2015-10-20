@@ -52,7 +52,13 @@ function processVehicleParkCommands(commands) {
 
         var Vehicle = (function () {
             function Vehicle(brand, age, terrainCoverage, numberOfWheels ){
-
+                if (this.constructor===Vehicle) {
+                    throw new Error("Cannot create instance of abstract class Vehicle.")
+                }
+                this.setBrand(brand);
+                this.setAge(age);
+                this.setTerrain(terrainCoverage);
+                this.setWheels(numberOfWheels);
             }
 
             Vehicle.prototype.getBrand= function () {
@@ -84,7 +90,7 @@ function processVehicleParkCommands(commands) {
                     throw new Error("Number of wheels cannot be negative.");
                 }
                 this._wheels = numberOfWheels;
-            }
+            };
 
             Vehicle.prototype.getVehicleInfo = function () {
                 return " -> " + this.constructor.name + ": " +
@@ -101,9 +107,46 @@ function processVehicleParkCommands(commands) {
             return Vehicle;
         })();
 
-        var Bike = {
-            // TODO: Implement this class
-        }
+        var Bike = (function () {
+            Bike.extends(Vehicle);
+
+            var BIKE_NUMBEROFWHEELS = 2;
+
+            function Bike(brand, age, terrainCoverage, frameSize, numberOfShifts){
+                   Vehicle.call(this,age,terrainCoverage,brand, frameSize, numberOfShifts, BIKE_NUMBEROFWHEELS)
+                this.setFrame(frameSize);
+                this.setShifts(numberOfShifts);
+            }
+
+            Bike.prototype.getFrame = function () {
+                return this._frameSize;
+            };
+            Bike.prototype.setFrame = function (frameSize) {
+                if (frameSize === undefined || isNaN(frameSize) || frameSize < 0) {
+                    throw new Error("Frame size cannot be negative.");
+                }
+                return this._frameSize = frameSize;
+            };
+
+            Bike.prototype.getShifts = function () {
+                return this._numberOfShifts;
+            };
+            Bike.prototype.setShifts = function (numberOfShifts) {
+                if (numberOfShifts === undefined || isNaN(numberOfShifts) || numberOfShifts < 0) {
+                    throw new Error("numberOfShifts cannot be negative.");
+                }
+                return this._numberOfShifts = numberOfShifts;
+            };
+
+            Bike.prototype.toString = function() {
+                return Vehicle.prototype.getVehicleInfo.call(this) +
+                    ",frameSize=" + this.getFrame() +
+                    (this.getShifts() ? ",numberOfShifts=" + this.getShifts() : "");
+            }
+
+            return Bike;
+        })();
+
 
         var Automobile = {
             // TODO: Implement this class
