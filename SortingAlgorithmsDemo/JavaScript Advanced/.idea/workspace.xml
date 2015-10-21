@@ -34,20 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehiclePark.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VehiclePark.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.70247936">
+              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehiclePark-Skeleton.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VehiclePark-Skeleton.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark-Skeleton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47244096">
+            <state vertical-scroll-proportion="0.0">
               <caret line="147" column="13" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
               <folding />
             </state>
@@ -102,7 +102,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="2" />
     <option name="y" value="122" />
-    <option name="width" value="1440" />
+    <option name="width" value="1168" />
     <option name="height" value="920" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -128,6 +128,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,8 +172,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,10 +187,7 @@
       <recent name="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\JavaScript Advanced\Exam\Exam-2015-01-20" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.todoList.js">
-    <configuration default="false" name="02.bugFixLevel2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="02.bugFixLevel2.js" working-dir="$PROJECT_DIR$/02.Simulating OOP In JS">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.VehiclePark-Skeleton.js">
     <configuration default="false" name="03.arrayFlattening.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="03.arrayFlattening.js" working-dir="$PROJECT_DIR$/02.Simulating OOP In JS">
       <method />
     </configuration>
@@ -201,6 +198,9 @@
       <method />
     </configuration>
     <configuration default="false" name="todoList.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="todoList.js" working-dir="$PROJECT_DIR$/04.Design patterns">
+      <method />
+    </configuration>
+    <configuration default="false" name="VehiclePark-Skeleton.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="VehiclePark-Skeleton.js" working-dir="$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -242,19 +242,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.02.bugFixLevel2.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.03.arrayFlattening.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.04.usefulStringMethods.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.01.2DGeometryStructure – Pseudo-ClassicalModel.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.todoList.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.03.arrayFlattening.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.04.usefulStringMethods.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.01.2DGeometryStructure – Pseudo-ClassicalModel.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.todoList.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.VehiclePark-Skeleton.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.todoList.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.01.2DGeometryStructure – Pseudo-ClassicalModel.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.04.usefulStringMethods.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.03.arrayFlattening.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.02.bugFixLevel2.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.VehiclePark-Skeleton.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.todoList.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.01.2DGeometryStructure – Pseudo-ClassicalModel.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.04.usefulStringMethods.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.03.arrayFlattening.js" />
       </list>
     </recent_temporary>
   </component>
@@ -305,18 +305,24 @@
       <option name="project" value="LOCAL" />
       <updated>1445273689400</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update">
+      <created>1445358621138</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1445358621138</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="122" width="1440" height="920" extended-state="0" />
+    <frame x="2" y="122" width="1168" height="920" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2629341" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.262511" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5028386" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33" sideWeight="0.4971614" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917705" sideWeight="0.4971614" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -354,6 +360,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="340" column="10" selection-start-line="340" selection-start-column="10" selection-end-line="340" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark-Skeleton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -680,18 +710,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark.html">
+    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark-Skeleton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="147" column="13" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark-Skeleton.js">
+    <entry file="file://$PROJECT_DIR$/Exam/Exam-2015-01-20/VehiclePark-Skeleton/VehiclePark.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47244096">
-          <caret line="147" column="13" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.70247936">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
           <folding />
         </state>
       </provider>
