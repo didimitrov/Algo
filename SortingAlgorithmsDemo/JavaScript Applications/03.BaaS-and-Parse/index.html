@@ -22,69 +22,15 @@
 
 </head>
 <body>
-<div id="countries-container">
-    <ul id="countries"></ul>
-</div>
-<div id="towns-container">
-    <ul id="towns"></ul>
-</div>
-<a href="#" id="town-add-btn">Add Country</a><input type="text" id="newCountryName">
+    <div id="countries-container">
+        <ul id="countries"></ul>
+    </div>
+    <div id="towns-container">
+        <ul id="towns"></ul>
+    </div>
+    <a href="#" id="town-add-btn">Add Country</a><input type="text" id="newCountryName">
 <script>
-//    var COUNTRIES_LIST_ID = "zglO59FNb78GVcUsUOJLp1tqfLxcZ3u3C8a88hox";
-//    var COUNTRIES_LIST_KEY = "vgv5unJ0bLI5N1fs0NfgOrD2GnSGCEjzdPCNbDZO";
-//    var headers = {
-//        "X-Parse-Application-Id": COUNTRIES_LIST_ID,
-//        "X-Parse-REST-API-Key": COUNTRIES_LIST_KEY
-//    };
-//
-//    function townsRequest() {
-//        $('.selected').removeClass('selected');
-//        $(this).addClass('selected');
-//        $.ajax({
-//            method: "GET",
-//            headers: headers,
-//            url: 'https://api.parse.com/1/classes/Town?where=' +
-//            '{"country": {"__type": "Pointer","className": "Country", "objectId": "' + $(this).attr('objectId') +'"}}',
-//        }).success(function (data) {
-//            $('#towns').children().remove();
-//            for(var t in data.results) {
-//                var town = data.results[t];
-//                var townItem = $('<li>').text(town.name);
-//                townItem.appendTo($('#towns'));
-//            }
-//        }).error(function () {
-//            alert('Cannot load countries');
-//        });
-//    }
-//
-//    $.ajax({
-//        method: "GET",
-//        headers: headers,
-//        url: "https://api.parse.com/1/classes/Country",
-//    }).success(function (data) {
-//        for(var t in data.results) {
-//            var country = data.results[t];
-//            var countryItem = $('<li>').text(country.name);
-//            $(countryItem).attr('objectId', country.objectId);
-//            countryItem.on('click', townsRequest);
-//            countryItem.appendTo($('#countries'));
-//        }
-//    }).error(function () {
-//        alert('Cannot load countries');
-//    });
-//    $.ajax({
-//        method: "GET",
-//        headers: headers,
-//        url: "https://api.parse.com/1/classes/Town?order=name",
-//    }).success(function (data) {
-//        for(var t in data.results) {
-//            var town = data.results[t];
-//            var townItem = $('<li>').text(town.name);
-//            townItem.appendTo($('#towns'));
-//        }
-//    }).error(function () {
-//        alert('Cannot load countries');
-//    });
+
 </script>
 </body>
 </html>
