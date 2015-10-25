@@ -41,6 +41,18 @@ $(document).ready(function () {
                $(countryItem).attr('objectId', country.objectId);
                countryItem.appendTo($('#countries'));
                countryItem.on('click',townsRequest)
+
+
+               var options = $('<div class="options">');
+               options.attr('class', country.objectId);
+
+               var deleteButton = $('<button class="delete">Delete</button>');
+               deleteButton.data('country', country);
+               deleteButton.click(delCountry);
+               options.append(deleteButton);
+
+               options.appendTo(countryItem);
+               countryItem.appendTo($("#countries"));
            }
        }).error(function () {
            alert('Cannot load countries')
@@ -79,6 +91,21 @@ $(document).ready(function () {
            });
        }
    };
-    $('a').on('click', addCountry);
+    $('#town-add-btn').on('click', addCountry);
 
+
+    var delCountry = function () {
+        var country =$(this).data('country');
+            $.ajax({
+                method: 'delete',
+                headers: headers,
+                url: "https://api.parse.com/1/classes/Country/"+country.objectId,
+                contentType: 'application/json',
+            }).success(function () {
+                loadCountries();
+                input.remove();
+            }).error(function () {
+                alert('Error occurred while adding new country')
+            });
+        }
 });
