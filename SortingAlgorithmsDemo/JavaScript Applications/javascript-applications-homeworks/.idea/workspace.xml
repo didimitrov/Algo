@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dfe2987-4665-4dbe-a5fb-121d4616af8a" name="Default" comment="Update">
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\JavaScript Applications\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\JavaScript Applications\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\.idea\javascript-applications-homeworks.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\01.Element-insertions\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\01.Element-insertions\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\02.BackgroundColorSwitch\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\02.BackgroundColorSwitch\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\03.TableGenerator\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\03.TableGenerator\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\04. Slideshow\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\04. Slideshow\images\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\04. Slideshow\images\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\04. Slideshow\images\3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\04. Slideshow\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\01.jQuery-Overview\04. Slideshow\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\02.Web-storages\01.GreetingSystem\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\02.Web-storages\01.GreetingSystem\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\02.Web-storages\02.Pool\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\02.Web-storages\02.Pool\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\02.Web-storages\02.Pool\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\03.BaaS-and-Parse\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\03.BaaS-and-Parse\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\GitHubWorkFiles\Algo\SortingAlgorithmsDemo\javascript-applications-homeworks\libs\jquery-2.1.4.min.js" afterPath="" />
-    </list>
+    <list default="true" id="1dfe2987-4665-4dbe-a5fb-121d4616af8a" name="Default" comment="Update" />
     <ignored path="JavaScript Applications.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +20,18 @@
     <favorites_list name="JavaScript Applications" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01.jQuery-Overview/01.Element-insertions/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,27 +43,27 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/01.Element-insertions/index.html" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/01.Element-insertions/app.js" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/02.BackgroundColorSwitch/index.html" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/02.BackgroundColorSwitch/app.js" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/03.TableGenerator/index.html" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/03.TableGenerator/app.js" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/04. Slideshow/style.css" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/04. Slideshow/index.html" />
-        <option value="$PROJECT_DIR$/01.jQuery-Overview/04. Slideshow/app.js" />
-        <option value="$PROJECT_DIR$/02.Web-storages/01.GreetingSystem/app.js" />
-        <option value="$PROJECT_DIR$/02.Web-storages/01.GreetingSystem/index.html" />
-        <option value="$PROJECT_DIR$/02.Web-storages/02.Pool/app.js" />
-        <option value="$PROJECT_DIR$/02.Web-storages/02.Pool/style.css" />
-        <option value="$PROJECT_DIR$/02.Web-storages/02.Pool/index.html" />
-        <option value="$PROJECT_DIR$/03.BaaS-and-Parse/index.html" />
-        <option value="$PROJECT_DIR$/03.BaaS-and-Parse/app.js" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/01.Element-insertions/index.html" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/01.Element-insertions/app.js" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/02.BackgroundColorSwitch/index.html" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/02.BackgroundColorSwitch/app.js" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/03.TableGenerator/index.html" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/03.TableGenerator/app.js" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/04. Slideshow/style.css" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/04. Slideshow/index.html" />
+        <option value="$PROJECT_DIR$/../01.jQuery-Overview/04. Slideshow/app.js" />
+        <option value="$PROJECT_DIR$/../02.Web-storages/01.GreetingSystem/app.js" />
+        <option value="$PROJECT_DIR$/../02.Web-storages/01.GreetingSystem/index.html" />
+        <option value="$PROJECT_DIR$/../02.Web-storages/02.Pool/app.js" />
+        <option value="$PROJECT_DIR$/../02.Web-storages/02.Pool/style.css" />
+        <option value="$PROJECT_DIR$/../02.Web-storages/02.Pool/index.html" />
+        <option value="$PROJECT_DIR$/../03.BaaS-and-Parse/index.html" />
+        <option value="$PROJECT_DIR$/../03.BaaS-and-Parse/app.js" />
       </list>
     </option>
   </component>
@@ -119,6 +103,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -127,10 +112,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript-applications-homeworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript-applications-homeworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript-applications-homeworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript-applications-homeworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01.jQuery-Overview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript-applications-homeworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript-applications-homeworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01.jQuery-Overview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01.Element-insertions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -141,7 +167,7 @@
     <property name="FullScreen" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/javascript-applications-homeworks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -243,14 +269,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="109" width="1671" height="969" extended-state="0" />
-    <editor active="false" />
+    <frame x="11" y="109" width="1671" height="969" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24908648" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.49647266" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5085262" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744405" sideWeight="0.51096225" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3278496" sideWeight="0.49147382" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744405" sideWeight="0.48903775" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.49647266" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -284,5 +310,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/01.jQuery-Overview/01.Element-insertions/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
