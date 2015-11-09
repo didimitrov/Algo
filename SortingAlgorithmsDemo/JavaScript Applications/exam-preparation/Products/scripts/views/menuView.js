@@ -9,6 +9,7 @@ app.views.menuView= (function () {
         $.get('templates/navigation.html', function (template) {
             var temp = Handlebars.compile(template);
             var html = temp(data);
+            $(selector).html(html);
         }).success(function (data) {
             defer.resolve(data)
         }).error(function (error) {

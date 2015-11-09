@@ -5,7 +5,7 @@ var app = app || {};
     var ajaxRequester = app.requester.get(baseUrl);
     var models = app.model.get(ajaxRequester);
     var controller = app.controller.get(models)
-    //controller.attachEventHandlers();
+    controller.attachEventHandlers();
 
     app.router = Sammy(function () {
         var mainSelector= '#main',
@@ -16,12 +16,20 @@ var app = app || {};
             controller.loadHomePage(mainSelector);
         })
 
+        this.get('#/register', function () {
+            loadHeader();
+            controller.loadRegisterPage(mainSelector)
+        })
+
+        this.get('#/login', function () {
+            loadHeader();
+            controller.loadLoginPage(mainSelector)
+        })
+
         function loadHeader(){
             return controller.loadHeader(menuSelector)
         }
-        this.notFound = function(){
 
-        }
     });
 
 

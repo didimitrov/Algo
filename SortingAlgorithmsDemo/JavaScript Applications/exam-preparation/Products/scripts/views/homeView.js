@@ -9,8 +9,9 @@ app.views.homeView= (function () {
         $.get('templates/home.html', function (template) {
             var temp = Handlebars.compile(template);
             var html = temp(data);
-        }).success(function (data) {
-            defer.resolve(data)
+            $(selector).html(html);
+        }).success(function (_data) {
+            defer.resolve(_data)
         }).error(function (error) {
             defer.reject(error)
         });
