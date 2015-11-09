@@ -19,7 +19,7 @@ app._model.users=(function () {
                 defer.resolve(data);
             }, function (error) {
                 defer.reject(error)
-            })
+            });
         return defer.promise;
     };
 
@@ -39,7 +39,7 @@ app._model.users=(function () {
         return defer.promise;
     };
 
-    Users.prototype.editPrifile=function(userId, userData){
+    Users.prototype.editProfile= function(userId, userData){
         var defer = Q.defer();
         this._requester.put('users/'+userId)
             .then(function (data) {
