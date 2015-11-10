@@ -26,6 +26,16 @@ var app = app || {};
             controller.loadLoginPage(mainSelector)
         })
 
+        this.get('#/logout', function () {
+
+            controller.logout()
+        })
+
+        this.get('#/products', function () {
+            loadHeader();
+            controller.loadProducts(mainSelector);
+        });
+
         function loadHeader(){
             return controller.loadHeader(menuSelector)
         }

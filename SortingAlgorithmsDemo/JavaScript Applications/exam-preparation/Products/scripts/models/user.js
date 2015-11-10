@@ -10,7 +10,7 @@ app._model.users=(function () {
     Users.prototype.login= function (username, password) {
         var defer = Q.defer();
 
-        this._requester.get('login?username' + username + '&password' + password)
+        this._requester.get('login?username=' + username + '&password=' + password)
             .then(function (data) {
                 app.credentials.setSessionToken(data.sessionToken);
                 app.credentials.setUserId(data.objectId);
@@ -81,11 +81,11 @@ app._model.users=(function () {
 
         this._requester.post('logout')
             .then(function (data) {
-                app.credentials.clearSessionStorage()
+                app.credentials.clearSessionStorage();
                 defer.resolve(data)
             }, function (error) {
                 defer.reject(error)
-            })
+            });
         return defer.promise;
     }
 

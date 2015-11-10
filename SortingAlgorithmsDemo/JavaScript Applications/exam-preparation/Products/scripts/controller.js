@@ -12,6 +12,7 @@ app.controller = (function () {
 
         if(this._model.users.isLogged()){
             isLogged.isLogged = true;
+
         }
 
         return  app.views.menuView.load(headerSelector, isLogged);
@@ -24,6 +25,10 @@ app.controller = (function () {
 
         if(this._model.users.isLogged()){
             _isLogged.isLogged = true;
+
+            var name = app.credentials.getUsername();
+            $("#hiUser").html('Hello, <span>' +
+                sessionStorage['username'] + '</span>')
 
         }
 
@@ -48,12 +53,52 @@ app.controller = (function () {
         }
     };
 
+    Controller.prototype.logout = function(){
+        var _this = this;
+
+        if(this._model.users.isLogged()){
+            this._model.users.logout()
+                .then(function(){
+                    _this.redirectTo('#/');
+                    console.log('Successfully logged out.');
+                });
+        } else {
+            console.log('Already logged out.');
+            this.redirectTo('#/')
+        }
+    };
+
+    Controller.prototype.loadProducts= function (selector) {
+        var _this= this;
+        var categories=[];
+
+        if (this._model.users.isLogged()) {
+            _this._model.products.getAllProducts()
+                .then(function (data) {
+                    $.each(data.products, function (key, value) {
+                        categories.push(value.category);
+                    });
+                    data.categories =  $.unique(categories);
+                    app.views.productsView(selector, data)
+                })
+        }else {
+            this.redirectTo('#/');
+            console.log('You have to login to see this page!'); //Noty.error
+        }
+
+    }
+
+    Controller.prototype.redirectTo = function(url) {
+        window.location = url;
+    }
 
     Controller.prototype.attachEventHandlers= function () {
         var selector = '#main';
         attachRegisterHandler.call(this, selector);
+        attachLoginHandler.call(this, selector)
 
     };
+
         var attachRegisterHandler = function (selector) {
             var _this= this;
 
@@ -80,7 +125,26 @@ app.controller = (function () {
             })
         };
 
+    var attachLoginHandler= function (selector) {
+        var _this= this;
 
+        $(selector).on('click', '#login-button', function () {
+            var userData= {
+                username:$('#username').val(),
+                password: $('#password').val()
+            };
+
+            _this._model.users.login(userData.username, userData.password)
+                .then(function () {
+                    console.log('Login successful.'); //Noty.success
+                    _this.redirectTo('#/');
+                }, function (error) {
+                    console.log('Your login has encountered an error.');
+                    _this.redirectTo('#/');
+                });
+            return false;
+        })
+    }
 
 
 

@@ -4,8 +4,8 @@ app.credentials=(function () {
 
 
     function getHeaders(){
-    var PARSE_APP_ID = 'gKTANX7eubZRN3D3UiAk6q6Z0UHOzg8bIu4HIN7T';
-    var PARSE_REST_API_KEY = 'fU26dkPhG6muunjxRw8GB8rVUVmhohFKIEMG4mmJ'
+    var PARSE_APP_ID = 'SMNynWfo18IfxXeLpfE6riLuBYvsaW2Cj5p6x9y0';
+    var PARSE_REST_API_KEY = '666h99DRXKX0ocwax5Db7Dyagss1hhw5KELJwX7q';
 
     var headers = {
             'X-Parse-Application-Id': PARSE_APP_ID,

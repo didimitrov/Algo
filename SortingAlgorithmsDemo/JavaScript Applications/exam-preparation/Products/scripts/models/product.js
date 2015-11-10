@@ -15,7 +15,7 @@ app._model.products = (function () {
         var _this= this;
         var userId = app.credentials.getUserId();
 
-        this._requester.get('classes/product')
+        this._requester.get('classes/Product')
             .then(function (data) {
                 _this._products['products'].lenght= 0;
 
