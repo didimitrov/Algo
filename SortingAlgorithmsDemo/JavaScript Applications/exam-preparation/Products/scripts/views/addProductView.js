@@ -1,13 +1,13 @@
 var app = app || {};
 app.views = app.views || {};
 
-app.views.productsView = (function(){
-    function productsView(selector, data) {
+app.views.addProductView = (function(){
+    function addProductView(selector) {
         var defer = Q.defer();
 
-        $.get('templates/products.html', function(template) {
+        $.get('templates/product-add.html', function(template) {
             var temp = Handlebars.compile(template);
-            var html = temp(data);
+            var html = temp();
             $(selector).html(html);
         }).success(function(_data) {
             defer.resolve(_data);
@@ -19,8 +19,8 @@ app.views.productsView = (function(){
     }
 
     return {
-        load: function (selector, data) {
-            return productsView(selector, data);
+        load: function (selector) {
+            return addProductView(selector);
         }
     }
 }());

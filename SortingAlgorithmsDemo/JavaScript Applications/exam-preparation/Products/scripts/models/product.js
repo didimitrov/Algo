@@ -19,7 +19,7 @@ app._model.products = (function () {
             .then(function (data) {
                 _this._products['products'].lenght= 0;
 
-                $.each(data['result'], function (key, productData) {
+                $.each(data['results'], function (key, productData) {
                     var product={
                         objectId: productData.objectId,
                         name: productData.name,
@@ -41,7 +41,7 @@ app._model.products = (function () {
     Products.prototype.getById= function (id) {
         var defer = Q.defer();
 
-        this._requester.get('classes/product' + id)
+        this._requester.get('classes/Product' + id)
             .then(function (data) {
             defer.resolve(data)
         }, function (error) {
@@ -53,7 +53,7 @@ app._model.products = (function () {
     Products.prototype.addProduct= function (productData) {
         var defer = Q.defer();
 
-        this._requester.post('classes/product', productData)
+        this._requester.post('classes/Product', productData)
             .then(function (data) {
                 defer.resolve(data)
             }, function (error) {
@@ -66,7 +66,7 @@ app._model.products = (function () {
     Products.prototype.editProduct= function (id, productData) {
         var defer = Q.defer();
 
-        this._requester.put('classes/product'+id, productData)
+        this._requester.put('classes/Product'+id, productData)
             .then(function (data) {
                 defer.resolve(data)
             }, function (error) {
@@ -79,7 +79,7 @@ app._model.products = (function () {
     Products.prototype.deleteProduct= function (id) {
         var defer = Q.defer();
 
-        this._requester.delete('classes/product'+id)
+        this._requester.delete('classes/Product'+id)
             .then(function (data) {
                 defer.resolve(data)
             }, function (error) {
@@ -104,7 +104,7 @@ app._model.products = (function () {
             }
         }
 
-        this._requester.get('classes/product?where'+JSON.stringify(where))
+        this._requester.get('classes/Product?where'+JSON.stringify(where))
             .then(function (data) {
                 _this._products['products'].lenght=0;
 

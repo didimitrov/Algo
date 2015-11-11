@@ -33,7 +33,12 @@ var app = app || {};
 
         this.get('#/products', function () {
             loadHeader();
-            controller.loadProducts(mainSelector);
+            controller.loadProductsPage(mainSelector);
+        });
+
+        this.get('#/product/add', function () {
+            loadHeader();
+            controller.loadProductAdd(mainSelector);
         });
 
         function loadHeader(){
