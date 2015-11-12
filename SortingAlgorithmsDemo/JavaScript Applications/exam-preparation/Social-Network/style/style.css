@@ -1,0 +1,37 @@
+body {
+    font-family: Calibri;
+    font-size: 18px !important;
+    background-image: url('../imgs/bg-pattern.jpg');
+}
+.logo {
+    height: 30px;
+    background-color: lightgray;
+    vertical-align: top;
+    text-align: center;
+    border-bottom: solid 1px #757575;
+}
+.logo img {
+     width: 25px;
+     height: 25px;
+     display: inline-block;
+ }
+.header {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+.header {
+    background-image: url('../imgs/clouds.png');
+    background-position: center center;
+}
+.header .image-container {
+    margin: 2% 2% 0 2%;
+}
+
+.image-container, .summary-container, .post-image, .post-info, .hover-box {
+    display: inline-block;
+}
+.main {
+    width: 60%;
+    margin: 0 auto;
+}

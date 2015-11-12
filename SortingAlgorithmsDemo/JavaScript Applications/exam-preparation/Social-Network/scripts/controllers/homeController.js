@@ -6,7 +6,7 @@ app.homeController= (function () {
     }
 
     HomeController.prototype.loadGuestHomePage= function (selector) {
-        return this.views.HomeViews().loadGuestHomePage(selector)
+        this.views.guestHomeView.loadGuestHomeView(selector)
     }
 
     HomeController.prototype.loadHomePage= function (selector) {
@@ -16,7 +16,7 @@ app.homeController= (function () {
             picture: sessionStorage['picture']
         };
 
-        return this.views.HomeViews().loadHomePage(selector, data)
+         this.views.homeView.loadHomeView(selector, data)
     }
 
 
