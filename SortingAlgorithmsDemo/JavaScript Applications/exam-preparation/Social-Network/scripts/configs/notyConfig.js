@@ -1,3 +1,5 @@
+var app = app || {};
+
 var Noty = (function() {
     function display(type, text, time) {
         var n = noty({
