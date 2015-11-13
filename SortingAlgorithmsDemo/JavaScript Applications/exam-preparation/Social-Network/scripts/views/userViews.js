@@ -7,6 +7,9 @@ app.userViews= (function () {
        };
        this.register={
            loadRegister: loadRegister
+       };
+       this.editProfileView = {
+           loadEditProfileView: loadEditProfileView
        }
    }
     function loadLogin(selector){
@@ -48,12 +51,12 @@ app.userViews= (function () {
                             $('#uploaded-picture').attr('src', file.currentTarget.result);
                         }
                         else {
-                            noty.error('#error-message', 'Image size is bigger than 128kb.');
+                            Noty.error( 'Image size is bigger than 128kb.');
                         }
                     };
                     reader.readAsDataURL(file);
                 } else {
-                    noty.error('#error-message', 'Invalid image file.');
+                    Noty.error( 'Invalid image file.');
                 }
             });
 
@@ -76,6 +79,56 @@ app.userViews= (function () {
             })
         }).done()
     }
+
+    function loadEditProfileView(selector, data) {
+        $.get('templates/edit-profile.html', function (template) {
+            var outputHtml = Mustache.render(template, data);
+            $(selector).html(outputHtml);
+        }).then(function () {
+            $(selector).on('click', '#upload-file-button', function () {
+                $('#picture').click();
+            });
+
+            // Reads the selected file and returns the data as a base64 encoded string
+            $(selector).on('change', '#picture', function () {
+                var file = this.files[0],
+                    reader;
+
+                if (file.type.match(/image\/.*/)) {
+                    reader = new FileReader();
+                    reader.onload = function (file) {
+                        if (file.total <= 131072) {
+                            $('#uploaded-picture').attr('src', file.currentTarget.result);
+                        }
+                        else {
+                            Noty.error('Image size is bigger than 128kb.');
+                        }
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    Noty.error('Invalid image file.');
+                }
+            });
+
+            $('#editProfileButton').click(function () {
+                var data = {
+                    username: $('#username').val(),
+                    password: $('#password').val(),
+                    name: $('#name').val(),
+                    about: $('#about').val(),
+                    gender: $('input[name=gender-radio]:checked').val(),
+                    picture: $('#uploaded-picture').attr('src')
+                };
+
+                $.sammy(function () {
+                    this.trigger('editProfile', data);
+                });
+
+                return false;
+            });
+        }).done();
+    }
+
 
     return{
         load: function () {

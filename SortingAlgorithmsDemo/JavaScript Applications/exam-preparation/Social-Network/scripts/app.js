@@ -12,13 +12,16 @@ var app = app || {};
     //views
     var userViews = app.userViews.load();
     var homeViews = app.homeViews.load();
+    var postViews = app.postViews.load();
 
     //models
     var userModel = app.user.load(baseUrl, requester, headers);
+    var postModel = app.post.load(baseUrl, requester, headers);
 
     //controllers
     var homeController= app.homeController.load(homeViews);
     var userController= app.userController.load(userModel, userViews);
+    var postController = app.postController.load(postModel,postViews);
     
     app.router= Sammy(function () {
         var selector = '#main';
@@ -61,8 +64,15 @@ var app = app || {};
                 this.redirect('#/home/');
                 return false;
             }
-        })
+        });
         this.before('#/logout/', function() {
+            var userId = sessionStorage['userId'];
+            if(!userId) {
+                this.redirect('#/');
+                return false;
+            }
+        });
+        this.before('#/editProfile/', function() {
             var userId = sessionStorage['userId'];
             if(!userId) {
                 this.redirect('#/');
@@ -78,16 +88,18 @@ var app = app || {};
         });
         this.get('#/login/', function () {
             userController.loadLoginPage(selector)
-        })
+        });
         this.get('#/logout/', function () {
             userController.logout();
         });
-
         this.get('#/home/', function () {
             homeController.loadHomePage('#header');
-           // postController.loadAllPostsPage(selector);
+            postController.loadAllPostsPage(selector);
         });
-
+        this.get('#/editProfile/', function () {
+            homeController.loadHomePage('#header');
+            userController.loadEditProfilePage(selector);
+        });
 
         // triggers
         this.bind('login', function(event, data) {
@@ -97,6 +109,12 @@ var app = app || {};
         this.bind('register', function(event, data) {
             userController.register(data.username, data.password, data.name, data.about, data.gender, data.picture);
         });
-    })
+        this.bind('post', function(event, data) {
+            postController.post(data.content);
+        });
+        this.bind('editProfile', function(event, data) {
+            userController.editProfile(data.username, data.password, data.name, data.about, data.gender, data.picture);
+        });
+    });
     app.router.run('#/');
-}())
+}());

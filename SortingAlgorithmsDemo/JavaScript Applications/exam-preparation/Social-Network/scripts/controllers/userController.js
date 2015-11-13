@@ -12,9 +12,18 @@ app.userController= (function () {
     UserController.prototype.loadRegisterPage= function (selector) {
         this.views.register.loadRegister(selector); //noty
     }
+    UserController.prototype.loadEditProfilePage = function(selector) {
+        var data = {
+            username: sessionStorage.username,
+            name: sessionStorage.name,
+            about: sessionStorage.about,
+            gender: sessionStorage.gender
+        };
+
+        this.views.editProfileView.loadEditProfileView(selector, data);
+    };
 
     UserController.prototype.register= function (username, password, name, about, gender, picture) {
-        var _this= this;
 
        return this.model.register(username,password,name, about, gender, picture)
             .then(function (registerData) {
@@ -30,9 +39,9 @@ app.userController= (function () {
 
                setUserToStorage(data);
                window.location = '#/home/';
-               _this.noty.success('#success-message', 'Register successful.');
+               Noty.success( 'Register successful.');
            }, function(error) {
-               _this.noty.error('#error-message', error.responseJSON.error);
+               Noty.error('Register failed.');
            })
         }
 
@@ -51,9 +60,9 @@ app.userController= (function () {
                 };
                 setUserToStorage(data);
                 window.location = '#/home/';
-                noty.success('Login successful.');
+                Noty.success('Login successful.');
             }, function(error) {
-                noty.error('Login failed.');
+                Noty.error('Login failed.');
 
             })
     }
@@ -65,12 +74,33 @@ app.userController= (function () {
             .then(function() {
                 clearUserFromStorage();
                 window.location = '#/';
-                _this.noty.success('#success-message', 'You successfully logged out.');
+                Noty.success('You successfully logged out.');
             }, function(error) {
-                _this.noty.error('#error-message', error.responseJSON.error);
+                Noty.error('Failed.');
             });
     };
 
+    UserController.prototype.editProfile = function(username, password, name, about, gender, picture) {
+
+        return this.model.editProfile(sessionStorage.userId, username, password, name, about, gender, picture)
+            .then(function(editProfileData) {
+                var data = {
+                    objectId: sessionStorage.userId,
+                    username: username,
+                    name: name || sessionStorage.name,
+                    about: about || sessionStorage.about,
+                    gender: gender || sessionStorage.gender,
+                    picture: picture || sessionStorage.picture,
+                    sessionToken: sessionStorage.sessionToken
+                };
+
+                setUserToStorage(data);
+                window.location = '#/';
+                Noty.success( 'Profile updated successfully.');
+            }, function(error) {
+                Noty.error('Error');
+            });
+    };
 
     function setUserToStorage(data) {
         sessionStorage['userId'] = data.objectId;
